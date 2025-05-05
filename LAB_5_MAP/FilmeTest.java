@@ -49,4 +49,14 @@ public class FilmeTest {
     public void testToStringFilme() {
         assertEquals("A Origem (2010)", filme.toString());
     }
+    @Test
+    public void testParticipanteComMultiplasFuncoes() {
+        filme.adicionarParticipante(ator, "Ator Principal");
+        filme.adicionarParticipante(ator, "Roteirista");
+
+        Map<Filme, List<String>> filmografiaAtor = ator.getFilmografia();
+        assertTrue(filmografiaAtor.containsKey(filme));
+        assertEquals(Arrays.asList("Ator Principal", "Roteirista"), filmografiaAtor.get(filme));
+    }
+
 }

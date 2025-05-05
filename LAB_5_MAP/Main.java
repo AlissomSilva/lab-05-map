@@ -8,8 +8,10 @@ public class Main {
         Filme filme = new Filme("Titanic", 1997, "My Heart Will Go On");
 
         filme.adicionarParticipante(ator1, "Protagonista");
+        filme.adicionarParticipante(ator1, "Co-diretor");
         filme.adicionarParticipante(ator2, "Protagonista");
         filme.adicionarParticipante(diretor, "Diretor");
+
 
         System.out.println("=== Descrição do Filme ===");
         System.out.println(filme.getDescricaoCompleta());
